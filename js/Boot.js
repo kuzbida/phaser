@@ -4,7 +4,8 @@ BunnyDefender.Boot = function(game) {};
 
 BunnyDefender.Boot.prototype = {
     preload: function () {
-
+        this.load.image('preloaderBar', 'images/loader_bar.png');
+        this.load.image('titleImage', 'images/TitleImage.png');
     },
 
     create: function () {
@@ -20,5 +21,7 @@ BunnyDefender.Boot.prototype = {
 
         this.input.addPointer();
         this.stage.backgroundColor = '#171642';
+
+        this.state.start('Preloader')
     }
 };
