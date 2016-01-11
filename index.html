@@ -6,14 +6,17 @@
     <title>Phaser</title>
 
     <script src="js/phaser.js"></script>
+    <script src="js/Boot.js"></script>
+    <script src="js/Preloader.js"></script>
     <style>
         body{
             padding: 0;
             margin: 0;
             background: black;
         }
-        canvas{
-            margin: auto;
+        #gameContainer{
+            max-height: 100vh;
+            max-width: 100vw;
         }
     </style>
 </head>
@@ -24,6 +27,8 @@
     window.onload = function(){
         var game = new Phaser.Game(540, 960, Phaser.AUTO, 'gameContainer');
         game.state.add('Boot', BunnyDefender.Boot);
+        game.state.add('Preloader', BunnyDefender.Preloader);
+        game.state.start('Boot');
     }
 </script>
 </body>

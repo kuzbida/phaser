@@ -4,8 +4,8 @@ BunnyDefender.Boot = function(game) {};
 
 BunnyDefender.Boot.prototype = {
     preload: function () {
-        this.load.image('preloaderBar', 'images/loader_bar.png');
-        this.load.image('titleImage', 'images/TitleImage.png');
+        this.load.image('preloaderBar', 'assets/images/loader_bar.png');
+        this.load.image('titleImage', 'assets/images/TitleImage.png');
     },
 
     create: function () {
@@ -17,7 +17,7 @@ BunnyDefender.Boot.prototype = {
         this.scale.pageAlignHorizontally = true;
         this.scale.pageAlignVertically = true;
         this.stage.forcePortrait = true;
-        this.scale.setScreenSize(true);
+        //this.scale.setScreenSize(true);
 
         this.input.addPointer();
         this.stage.backgroundColor = '#171642';
