@@ -11,6 +11,8 @@ BunnyDefender.Preloader.prototype = {
     this.load.setPreloadSprite(this.preloadBar);
     this.titleText = this.add.image(this.world.centerX, this.world.centerY - 220, 'titleImage');
     this.titleText.anchor.setTo(0.5,0.5);
+    this.load.image('titleScreen', 'assets/images/TitleBg.png');
+    this.load.bitmapFont('eightbitwonder', 'assets/fonts/eightbitwonder.png', 'assets/fonts/eightbitwonder.fnt');
   },
 
   create: function () {
@@ -18,5 +20,7 @@ BunnyDefender.Preloader.prototype = {
   },
 
   update: function () {
-    this.ready = true;  }
+    this.ready = true;
+    this.state.start('StartMenu');
+  }
 };

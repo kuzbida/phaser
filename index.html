@@ -8,6 +8,7 @@
     <script src="js/phaser.js"></script>
     <script src="js/Boot.js"></script>
     <script src="js/Preloader.js"></script>
+    <script src="js/StartMenu.js"></script>
     <style>
         body{
             padding: 0;
@@ -28,6 +29,7 @@
         var game = new Phaser.Game(540, 960, Phaser.AUTO, 'gameContainer');
         game.state.add('Boot', BunnyDefender.Boot);
         game.state.add('Preloader', BunnyDefender.Preloader);
+        game.state.add('StartMenu', BunnyDefender.StartMenu);
         game.state.start('Boot');
     }
 </script>
